@@ -1,0 +1,32 @@
+let collectionNFT = [];
+
+function mintNFT (_name, _size, _species, _types){
+    const dinosaur ={
+        "name" :_name,
+        "size" :_size,
+        "species" :_species,
+        "types" :_types,
+    }
+    collectionNFT.push(dinosaur);
+    console.log("minted: " +_name);
+}
+
+function listNFTs () {
+    for (let i = 0; i <collectionNFT.length; i++){
+        console.log("nID: \t\t" + (i+1));
+        console.log("name: \t\t" + collectionNFT[i].name);
+        console.log("size: \t\t" + collectionNFT[i].size);
+        console.log("species: \t\t" + collectionNFT[i].name);
+        console.log("types: \t\t" + collectionNFT[i].types);
+
+    }
+}
+function getTotalSupply() {
+    console.log("TOTAL NFTs: " + collectionNFT.length);
+}
+mintNFT("bauri", "10ft", "genus", "carnivore");
+mintNFT("triceratops", "38ft", "atrox", "carnivore");
+mintNFT("allosaurus", "23ft", "prorsus", "carnivore");
+mintNFT("tyrannosaurus", "50ft", "rex", "carnivore");
+listNFTs();
+getTotalSupply();
